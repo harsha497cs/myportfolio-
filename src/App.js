@@ -35,6 +35,31 @@ function App() {
   }, []);
 
   const [activeSection, setActiveSection] = useState('home');
+  const [mapSrc, setMapSrc] = useState('https://www.google.com/maps?q=Kanchipura&output=embed');
+
+  const handleUseMyLocation = () => {
+    try {
+      if (!('geolocation' in navigator)) {
+        alert('Geolocation is not supported by your browser.');
+        return;
+      }
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude } = position.coords || {};
+          if (typeof latitude === 'number' && typeof longitude === 'number') {
+            setMapSrc(`https://www.google.com/maps?q=${latitude},${longitude}&output=embed`);
+          }
+        },
+        (error) => {
+          console.warn('Geolocation error:', error);
+          alert('Unable to fetch your location. Please allow location access.');
+        },
+        { enableHighAccuracy: true, timeout: 10000, maximumAge: 60000 }
+      );
+    } catch (err) {
+      console.warn('Failed to use geolocation:', err);
+    }
+  };
 
   useEffect(() => {
     let observer = null;
@@ -205,7 +230,6 @@ function App() {
                   <li><strong>Age:</strong> 18</li>
                   <li><strong>Phone:</strong> +91 9880339147</li>
                   <li><strong>City:</strong> Bangalore, India</li>
-                  <li><strong>Freelance:</strong> Available</li>
                 </ul>
               </div>
               <div style={{ textAlign: 'center' }}>
@@ -289,7 +313,8 @@ function App() {
             </p>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 24, marginTop: 24 }}>
               <div style={{ background: '#0f172a', border: '1px solid #1f2937', borderRadius: 16, padding: 24 }}>
-                <p><strong>Location:</strong> Yogakshema, Srinagara, Ujire</p>
+                <p><strong>Location:</strong> kanchipura post, Mathodu Hobil, hosadurga Taluk, Chitradurga-577533
+                </p>
                 <p><strong>Email:</strong> harsha497cs@gmail.com</p>
                 <p><strong>Call:</strong> +91 9880339147</p>
                 <p>
@@ -312,10 +337,26 @@ function App() {
               </div>
               
               <div style={{ gridColumn: '1 / -1', marginTop: 24 }}>
+                <div style={{ marginBottom: 12, display: 'flex', justifyContent: 'flex-end' }}>
+                  <button
+                    onClick={handleUseMyLocation}
+                    style={{
+                      background: '#0ea5e9',
+                      color: 'white',
+                      border: 'none',
+                      borderRadius: 8,
+                      padding: '10px 12px',
+                      cursor: 'pointer',
+                      fontWeight: 600
+                    }}
+                  >
+                    Use my location
+                  </button>
+                </div>
                 <div style={{ borderRadius: 16, overflow: 'hidden', border: '1px solid #1f2937' }}>
                   <iframe
                     title="Kanchipura Map"
-                    src="https://www.google.com/maps?q=Kanchipura&output=embed"
+                    src={mapSrc}
                     width="100%"
                     height="320"
                     style={{ border: 0 }}
