@@ -221,12 +221,8 @@ function App() {
                 <h4 style={{ color: '#e2e8f0', marginBottom: 8 }}>Freelance Projects & Personal Project</h4>
                 <ul style={{ color: '#94a3b8', paddingLeft: 18, lineHeight: 1.8 }}>
                   <li><a style={{ color: '#0ea5e9', textDecoration: 'none' }} href="https://www.triyatri.in">www.triyatri.in</a> - Auto Booking website for locals in Ujire</li>
-                  <li><a style={{ color: '#0ea5e9', textDecoration: 'none' }} href="https://www.sdmpalumniassociation.in">www.sdmpalumniassociation.in</a> - Alumni Association website</li>
-                  <li><a style={{ color: '#0ea5e9', textDecoration: 'none' }} href="https://springeracademyofchess.com">https://springeracademyofchess.com</a> - School of Chess site</li>
-                  <li>www.sarvaresorts.in - Group booking web app for 8 resorts (domain expired)</li>
-                  <li><a style={{ color: '#0ea5e9', textDecoration: 'none' }} href="https://www.hammerrestopub.com">https://www.hammerrestopub.com</a> - Restaurant website</li>
-                </ul>
-              </div>
+                  <li><a style={{ color: '#0ea5e9', textDecoration: 'none' }} href="https://github.com/harsha497cs/collegewedsite44"></a> - sdm Polytechnic colen</li>
+                 
             </div>
           </div>
         </section>
