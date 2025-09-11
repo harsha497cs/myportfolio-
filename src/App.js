@@ -41,7 +41,7 @@ function App() {
     
     const setupObserver = () => {
       try {
-        const sectionIds = ['home', 'about', 'freelance', 'skills', 'contact'];
+        const sectionIds = ['home', 'about', 'skills', 'contact'];
         const elements = sectionIds
           .map((id) => {
             const el = document.getElementById(id);
@@ -92,7 +92,7 @@ function App() {
     // Fallback scroll handler in case intersection observer fails
     const handleScroll = () => {
       try {
-        const sectionIds = ['home', 'about', 'portfolio', 'freelance', 'skills', 'contact'];
+        const sectionIds = ['home', 'about', 'portfolio', 'skills', 'contact'];
         const scrollPosition = window.scrollY + window.innerHeight / 2;
         
         for (let i = sectionIds.length - 1; i >= 0; i--) {
@@ -257,38 +257,7 @@ function App() {
 
         
 
-        {/* Freelance Career Section */}
-        <section id="freelance" style={{ background: '#0b1220', color: '#e5e7eb', padding: '64px 24px' }}>
-          <div style={{ maxWidth: 1040, margin: '0 auto' }}>
-            <h2 style={{ color: '#e2e8f0', fontSize: 32, margin: 0, fontWeight: 800 }}>Freelance Career</h2>
-            <div style={{ height: 4, width: 70, background: '#60a5fa', borderRadius: 999, marginTop: 12 }} />
-            <p style={{ marginTop: 24, lineHeight: 1.8, color: '#cbd5e1' }}>
-            s as 3rd-year Diploma student in Computer Engineering, I began my freelancing journey out of pure passion
-             for technology and creativity. From the early days of experimenting with code and design, I've grown into
-              a dedicated creator of web applications,video Editing,  and design projects..
-            </p>
-
-            <div style={{ display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: 24, marginTop: 36 }}>
-              <div style={{ background: '#0f172a', border: '1px solid #1f2937', borderRadius: 16, padding: 24, textAlign: 'center' }}>
-                <div style={{ fontSize: 44, fontWeight: 800, color: '#60a5fa' }}>4</div>
-                <div style={{ marginTop: 6, color: '#cbd5e1' }}>Happy Clients</div>
-              </div>
-              <div style={{ background: '#0f172a', border: '1px solid #1f2937', borderRadius: 16, padding: 24 }}>
-                <div style={{ fontSize: 44, fontWeight: 800, color: '#60a5fa', textAlign: 'center' }}>4</div>
-                <div style={{ marginTop: 6, color: '#cbd5e1', textAlign: 'center' }}>Projects</div>
-                <ul style={{ marginTop: 12, color: '#94a3b8', paddingLeft: 18 }}>
-                  <li>Web Apps</li>
-                  <li>Designing</li>
-                  <li>Video Editing</li>
-                </ul>
-              </div>
-              <div style={{ background: '#0f172a', border: '1px solid #1f2937', borderRadius: 16, padding: 24, textAlign: 'center' }}>
-                <div style={{ fontSize: 44, fontWeight: 800, color: '#60a5fa' }}>6</div>
-                <div style={{ marginTop: 6, color: '#cbd5e1' }}>Active Team members</div>
-              </div>
-            </div>
-          </div>
-        </section>
+        
 
         {/* Skills Section */}
         <section id="skills" style={{ background: '#0b1220', color: '#e5e7eb', padding: '64px 24px' }}>

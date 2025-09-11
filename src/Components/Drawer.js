@@ -229,7 +229,6 @@ const Drawer = ({
         <NavItem id="home" icon="home" label="Home" active={active.toLowerCase() === 'home'} onClick={() => onNavigate && onNavigate('home')} />
         <NavItem id="about" icon="user" label="About" active={active.toLowerCase() === 'about'} onClick={() => onNavigate && onNavigate('about')} />
         <NavItem id="portfolio" icon="book" label="Portfolio" active={active.toLowerCase() === 'portfolio'} onClick={() => onNavigate && onNavigate('portfolio')} />
-        <NavItem id="freelance" icon="user" label="Freelance" active={active.toLowerCase() === 'freelance'} onClick={() => onNavigate && onNavigate('freelance')} />
         <NavItem id="skills" icon="layers" label="Skills" active={active.toLowerCase() === 'skills'} onClick={() => onNavigate && onNavigate('skills')} />
         <NavItem id="contact" icon="mail" label="Contact" active={active.toLowerCase() === 'contact'} onClick={() => onNavigate && onNavigate('contact')} />
       </nav>
