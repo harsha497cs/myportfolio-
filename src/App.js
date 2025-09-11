@@ -184,10 +184,18 @@ function App() {
             <h2 style={{ color: '#e2e8f0', fontSize: 36, margin: 0, fontWeight: 800 }}>About</h2>
             <div style={{ height: 4, width: 70, background: '#60a5fa', borderRadius: 999, marginTop: 12 }} />
             <p style={{ marginTop: 24, lineHeight: 1.8, color: '#cbd5e1' }}>
-              As a creative and quick-thinking individual with a passion for building scalable and high
-              performance systems, I design and develop modern web applications for clients. Backed by a
-              degree in Computer Science, I thrive in fast-moving environments and love crafting delightful
-              user experiences that also perform well.
+              As a passionate Front-End Developer with a solid foundation in Computer Science, I bring
+              hands-on experience in building responsive, user-centric web applications using React,
+              HTML, CSS, and JavaScript. I specialize in crafting intuitive interfaces and deploying
+              polished projects via GitHub, with recent work including a functional website clone and
+              customized UI components using Material UI. My approach is rooted in practical
+              problem-solving and attention to detail, ensuring that every element contributes to a
+              seamless user experience. I'm deeply curious about emerging technologies like AI and cloud
+              computing, and I thrive in collaborative environments where I can contribute innovative
+              solutions while continuously learning from experienced teams. Driven by a desire to create
+              meaningful digital experiences, I'm eager to join dynamic development teams where I can
+              apply my technical skills, creativity, and growth mindset to deliver impactful front-end
+              solutions.
             </p>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 28, alignItems: 'start', marginTop: 24 }}>
               <div>
