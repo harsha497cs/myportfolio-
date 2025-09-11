@@ -220,7 +220,6 @@ const Drawer = ({
           <SocialButton icon="instagram" href="https://www.instagram.com/harshaa__._26?igsh=ZTl2aTl4eThreWg1/" label="Instagram" />
           <SocialButton icon="linkedin" href="https://www.linkedin.com/in/harsha-p" label="LinkedIn" />
           <SocialButton icon="github" href="https://github.com/harsha497c" label="GitHub" />
-          <SocialButton icon="facebook" href="https://www.facebook.com/share/14FyQrxqFMZ/" label="Facebook" />
         </div>
       </div>
 

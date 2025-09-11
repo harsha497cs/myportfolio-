@@ -227,37 +227,9 @@ function App() {
                   <li><a style={{ color: '#0ea5e9', textDecoration: 'none' }} href="https://www.hammerrestopub.com">https://www.hammerrestopub.com</a> - Restaurant website</li>
                 </ul>
               </div>
-
-              <div>
-                <h4 style={{ color: '#e2e8f0', marginBottom: 8 }}>LogiSian Projects (2021 - 2022)</h4>
-                <ul style={{ color: '#94a3b8', paddingLeft: 18, lineHeight: 1.8 }}>
-                  <li><a style={{ color: '#0ea5e9', textDecoration: 'none' }} href="https://logisian.in">https://logisian.in</a> - Company website</li>
-                  <li><a style={{ color: '#0ea5e9', textDecoration: 'none' }} href="https://mapulator.app/">https://mapulator.app/</a> - Product site</li>
-                  <li><a style={{ color: '#0ea5e9', textDecoration: 'none' }} href="https://ginferno.app/">https://ginferno.app/</a> - Company site and digital marketing</li>
-                </ul>
-              </div>
-
-              <div>
-                <h4 style={{ color: '#e2e8f0', marginBottom: 8 }}>Nous Infosystems Projects (Oct 2022 - Present)</h4>
-                <p style={{ color: '#94a3b8' }}>
-                  I have been working in Nous Infosystems since last 1.7 years as a Web Developer and Mobile Developer.
-                  I have worked in multiple projects and some with Client projects too. Here are some information about my projects in Nous.
-                </p>
-                <ul style={{ color: '#94a3b8', paddingLeft: 18, lineHeight: 1.8 }}>
-                  <li>Rediker Softwares - built 20+ websites using Bootstrap and React JS</li>
-                  <li>View Point Mobile Application - Flutter app for attendance and resource management</li>
-                  <li>nRich - Internal Flutter app for resource allocation</li>
-                  <li>Sanofi - React Native mobile application (banking related)</li>
-                  <li>Medinous - Patient Portal using Flutter for hospital management</li>
-                </ul>
-              </div>
             </div>
           </div>
         </section>
-
-        
-
-        
 
         {/* Skills Section */}
         <section id="skills" style={{ background: '#0b1220', color: '#e5e7eb', padding: '64px 24px' }}>
