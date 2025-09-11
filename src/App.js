@@ -205,6 +205,7 @@ function App() {
               </div>
             </div>
           </div>
+          <div style={{ display: 'none' }} />
         </section>
 
         
@@ -222,8 +223,10 @@ function App() {
                 <ul style={{ color: '#94a3b8', paddingLeft: 18, lineHeight: 1.8 }}>
                   <li><a style={{ color: '#0ea5e9', textDecoration: 'none' }} href="https://www.triyatri.in">www.triyatri.in</a> - Auto Booking website for locals in Ujire</li>
                   <li><a style={{ color: '#0ea5e9', textDecoration: 'none' }} href="https://github.com/harsha497cs/collegewedsite44"></a> - sdm Polytechnic colen</li>
-                 
+                </ul>
+              
             </div>
+          </div>
           </div>
         </section>
 
