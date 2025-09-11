@@ -8,7 +8,7 @@
   </p>
   <div style={{ display: 'grid', gridTemplateColumns: '1fr 1.5fr', gap: 24, marginTop: 24 }}>
     <div style={{ background: '#0f172a', border: '1px solid #1f2937', borderRadius: 16, padding: 24 }}>
-      <p><strong>Location:</strong> sdmit hostal Ujire</p>
+      <p><strong>Location:</strong> sdmit, hostal,Ujire</p>
       <p><strong>Email:</strong> harsha497cs@gmail.com</p>
       <p><strong>Call:</strong> +91 9880339147</p>
       <p><strong>WhatsApp:</strong> <a href="#http//980339147" style={{ color: '#0ea5e9', textDecoration: 'none' }}>click here</a></p>

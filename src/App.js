@@ -284,7 +284,23 @@ function App() {
                 <p><strong>Location:</strong> Yogakshema, Srinagara, Ujire</p>
                 <p><strong>Email:</strong> harsha497cs@gmail.com</p>
                 <p><strong>Call:</strong> +91 9880339147</p>
-                <p><strong>WhatsApp:</strong> <a href="#http//980339147" style={{ color: '#0ea5e9', textDecoration: 'none' }}>click here</a></p>
+                <p>
+                  <strong>WhatsApp:</strong>{' '}
+                  <button
+                    onClick={() => window.open('https://wa.me/9880339147', '_blank')}
+                    style={{
+                      background: 'transparent',
+                      border: 'none',
+                      color: '#0ea5e9',
+                      textDecoration: 'none',
+                      padding: 0,
+                      cursor: 'pointer',
+                      font: 'inherit'
+                    }}
+                  >
+                    chat on WhatsApp
+                  </button>
+                </p>
               </div>
               <form style={{ background: '#0f172a', border: '1px solid #1f2937', borderRadius: 16, padding: 24 }} onSubmit={(e) => e.preventDefault()}>
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
