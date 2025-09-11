@@ -222,7 +222,7 @@ function App() {
                 <h4 style={{ color: '#e2e8f0', marginBottom: 8 }}>Freelance Projects & Personal Project</h4>
                 <ul style={{ color: '#94a3b8', paddingLeft: 18, lineHeight: 1.8 }}>
                   <li><a style={{ color: '#0ea5e9', textDecoration: 'none' }} href="https://www.triyatri.in">www.triyatri.in</a> - Auto Booking website for locals in Ujire</li>
-                  <li><a style={{ color: '#0ea5e9', textDecoration: 'none' }} href="https://github.com/harsha497cs/collegewedsite44"></a> - sdm Polytechnic colen</li>
+                  <li><a style={{ color: '#0ea5e9', textDecoration: 'none' }} href="https://github.com/harsha497cs/collegewedsite44">github.com/harsha497cs/collegewedsite44</a> - SDM Polytechnic College website</li>
                 </ul>
               
             </div>
@@ -295,6 +295,19 @@ function App() {
                 <textarea placeholder="Message" rows={8} style={{ marginTop: 12, width: '100%', padding: 12, borderRadius: 8, border: '1px solid #1f2937', background: '#0b1220', color: '#e2e8f0', resize: 'vertical' }} />
                 <button type="submit" style={{ marginTop: 12, padding: '12px 16px', borderRadius: 8, border: 'none', background: '#0ea5e9', color: 'white', fontWeight: 600 }}>Send Message</button>
               </form>
+              <div style={{ gridColumn: '1 / -1', marginTop: 24 }}>
+                <div style={{ borderRadius: 16, overflow: 'hidden', border: '1px solid #1f2937' }}>
+                  <iframe
+                    title="Kanchipura Map"
+                    src="https://www.google.com/maps?q=Kanchipura&output=embed"
+                    width="100%"
+                    height="320"
+                    style={{ border: 0 }}
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
+                </div>
+              </div>
             </div>
           </div>
         </section>
