@@ -36,6 +36,8 @@ function App() {
 
   const [activeSection, setActiveSection] = useState('home');
   const [mapSrc, setMapSrc] = useState('https://www.google.com/maps?q=Kanchipura&output=embed');
+  const [formValues, setFormValues] = useState({ name: '', email: '', subject: '', message: '' });
+  const [formErrors, setFormErrors] = useState({});
 
   const handleUseMyLocation = () => {
     try {
@@ -159,6 +161,30 @@ function App() {
     } catch (error) {
       console.warn('Failed to navigate to section:', id, error);
     }
+  };
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormValues((prev) => ({ ...prev, [name]: value }));
+  };
+
+  const validateForm = () => {
+    const errors = {};
+    if (!formValues.name.trim()) errors.name = 'Name is required';
+    if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formValues.email)) errors.email = 'Valid email required';
+    if (!formValues.subject.trim()) errors.subject = 'Subject is required';
+    if (!formValues.message.trim()) errors.message = 'Message is required';
+    setFormErrors(errors);
+    return Object.keys(errors).length === 0;
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!validateForm()) return;
+    const to = 'harsha497cs@gmail.com';
+    const subject = encodeURIComponent(formValues.subject);
+    const body = encodeURIComponent(`Name: ${formValues.name}\nEmail: ${formValues.email}\n\n${formValues.message}`);
+    window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
   };
 
   return (
@@ -293,8 +319,7 @@ function App() {
               <div>
                 <h4 style={{ color: '#e2e8f0', marginBottom: 8 }}>Freelance Projects & Personal Project</h4>
                 <ul style={{ color: '#94a3b8', paddingLeft: 18, lineHeight: 1.8 }}>
-                  <li><a style={{ color: '#0ea5e9', textDecoration: 'none' }} href="https://www.triyatri.in">www.triyatri.in</a> - Auto Booking website for locals in Ujire</li>
-                  <li><a style={{ color: '#0ea5e9', textDecoration: 'none' }} href="https://github.com/harsha497cs/collegewedsite44">github.com/harsha497cs/collegewedsite44</a> - SDM Polytechnic College website</li>
+                  <li><a style={{ color: '#0ea5e9', textDecoration: 'none' }} href="https://collagewebsitclon.vercel.app/">collagewebsitclon.vercel.app</a> - College Website Clone (live)</li>
                 </ul>
               
             </div>
@@ -352,6 +377,59 @@ function App() {
               Contact me for any queries or you can write us, we will get back to you in 48 hours.
             </p>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr', gap: 24, marginTop: 24 }}>
+              <form onSubmit={handleSubmit} style={{ background: '#0f172a', border: '1px solid #1f2937', borderRadius: 16, padding: 24 }}>
+                <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
+                  <div>
+                    <label style={{ display: 'block', color: '#cbd5e1', marginBottom: 6 }}>Name *</label>
+                    <input
+                      name="name"
+                      value={formValues.name}
+                      onChange={handleInputChange}
+                      placeholder="Your full name"
+                      style={{ width: '100%', background: '#0b1220', color: '#e2e8f0', border: '1px solid #1f2937', borderRadius: 10, padding: '12px 14px' }}
+                    />
+                    {formErrors.name && <div style={{ color: '#f87171', marginTop: 6 }}>{formErrors.name}</div>}
+                  </div>
+                  <div>
+                    <label style={{ display: 'block', color: '#cbd5e1', marginBottom: 6 }}>Email *</label>
+                    <input
+                      name="email"
+                      value={formValues.email}
+                      onChange={handleInputChange}
+                      placeholder="your.email@example.com"
+                      style={{ width: '100%', background: '#0b1220', color: '#e2e8f0', border: '1px solid #1f2937', borderRadius: 10, padding: '12px 14px' }}
+                    />
+                    {formErrors.email && <div style={{ color: '#f87171', marginTop: 6 }}>{formErrors.email}</div>}
+                  </div>
+                </div>
+                <div style={{ marginTop: 16 }}>
+                  <label style={{ display: 'block', color: '#cbd5e1', marginBottom: 6 }}>Subject</label>
+                  <input
+                    name="subject"
+                    value={formValues.subject}
+                    onChange={handleInputChange}
+                    placeholder="What's this about?"
+                    style={{ width: '100%', background: '#0b1220', color: '#e2e8f0', border: '1px solid #1f2937', borderRadius: 10, padding: '12px 14px' }}
+                  />
+                  {formErrors.subject && <div style={{ color: '#f87171', marginTop: 6 }}>{formErrors.subject}</div>}
+                </div>
+                <div style={{ marginTop: 16 }}>
+                  <label style={{ display: 'block', color: '#cbd5e1', marginBottom: 6 }}>Message *</label>
+                  <textarea
+                    name="message"
+                    value={formValues.message}
+                    onChange={handleInputChange}
+                    rows={6}
+                    placeholder="Tell me about your project or idea..."
+                    style={{ width: '100%', background: '#0b1220', color: '#e2e8f0', border: '1px solid #1f2937', borderRadius: 10, padding: '12px 14px', resize: 'vertical' }}
+                  />
+                  {formErrors.message && <div style={{ color: '#f87171', marginTop: 6 }}>{formErrors.message}</div>}
+                </div>
+                <div style={{ display: 'flex', alignItems: 'center', gap: 12, marginTop: 16 }}>
+                  <button type="submit" style={{ background: 'linear-gradient(90deg,#3b82f6,#8b5cf6)', border: 'none', color: 'white', padding: '12px 16px', borderRadius: 10, cursor: 'pointer', fontWeight: 700 }}>Send Message</button>
+                  <span style={{ color: '#94a3b8' }}>Response within 48 hours</span>
+                </div>
+              </form>
               <div style={{ background: '#0f172a', border: '1px solid #1f2937', borderRadius: 16, padding: 24 }}>
                 <p><strong>Location:</strong> kanchipura post, Mathodu Hobil, hosadurga Taluk, Chitradurga-577533
                 </p>
