@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './App.css';
 import Drawer from './Components/Drawer';
-import heroImg from './Components/image1.jpg';
+import Resume from './resume';
+// Removed local hero image; using a neutral placeholder background only
 
 function App() {
   const typedElRef = useRef(null);
@@ -224,7 +225,7 @@ function App() {
             </p>
             <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 28, alignItems: 'start', marginTop: 24 }}>
               <div>
-                <h3 style={{ color: '#e2e8f0', fontSize: 24, marginTop: 0 }}>Web Developer & Mobile Developer</h3>
+                <h3 style={{ color: '#e2e8f0', fontSize: 24, marginTop: 0 }}>Web Developer</h3>
                 <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 12 }}>
                   <li><strong>Birthday:</strong> 26 dec 2007</li>
                   <li><strong>Age:</strong> 18</li>
@@ -233,11 +234,60 @@ function App() {
                 </ul>
               </div>
               <div style={{ textAlign: 'center' }}>
-                <img src={heroImg} alt="About visual" style={{ maxWidth: '100%', borderRadius: 16, opacity: 0.95 }} />
+                <img
+                  src="/about-illustration.png"
+                  alt="About illustration"
+                  style={{ maxWidth: '100%', borderRadius: 16, opacity: 0.95 }}
+                  onError={(e) => {
+                    try { e.currentTarget.style.display = 'none'; } catch (_) {}
+                  }}
+                />
               </div>
             </div>
           </div>
           <div style={{ display: 'none' }} />
+        </section>
+
+        <Resume />
+
+        {/* Education Details Section */}
+        <section id="education" style={{ background: '#0b1220', color: '#e5e7eb', padding: '64px 24px' }}>
+          <div style={{ maxWidth: 1040, margin: '0 auto' }}>
+            <h2 style={{ color: '#e2e8f0', fontSize: 32, margin: 0, fontWeight: 800 }}>Education Details</h2>
+            <div style={{ height: 4, width: 70, background: '#60a5fa', borderRadius: 999, marginTop: 12 }} />
+            <div style={{ marginTop: 24, overflowX: 'auto' }}>
+              <table style={{ width: '100%', borderCollapse: 'collapse', color: '#cbd5e1' }}>
+                <thead>
+                  <tr>
+                    <th style={{ border: '1px solid #1f2937', padding: 12, textAlign: 'left' }}>Qualification</th>
+                    <th style={{ border: '1px solid #1f2937', padding: 12, textAlign: 'left' }}>College / School Name</th>
+                    <th style={{ border: '1px solid #1f2937', padding: 12, textAlign: 'left' }}>University/Board</th>
+                    <th style={{ border: '1px solid #1f2937', padding: 12, textAlign: 'left' }}>Year of Passing (YOP)</th>
+                    <th style={{ border: '1px solid #1f2937', padding: 12, textAlign: 'left' }}>Branch / Stream</th>
+                    <th style={{ border: '1px solid #1f2937', padding: 12, textAlign: 'left' }}>Percentage (%)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td style={{ border: '1px solid #1f2937', padding: 12 }}>DIPLOMA</td>
+                    <td style={{ border: '1px solid #1f2937', padding: 12 }}>SDM Polytechnic, Ujire.</td>
+                    <td style={{ border: '1px solid #1f2937', padding: 12 }}>Directorate of Technical Education</td>
+                    <td style={{ border: '1px solid #1f2937', padding: 12 }}>2026</td>
+                    <td style={{ border: '1px solid #1f2937', padding: 12 }}>CSE</td>
+                    <td style={{ border: '1px solid #1f2937', padding: 12 }}>—</td>
+                  </tr>
+                  <tr>
+                    <td style={{ border: '1px solid #1f2937', padding: 12 }}>10<sup>th</sup></td>
+                    <td style={{ border: '1px solid #1f2937', padding: 12 }}>M P Prakash High School, Hosadurga</td>
+                    <td style={{ border: '1px solid #1f2937', padding: 12 }}>Karnataka Secondary Education Examination Board</td>
+                    <td style={{ border: '1px solid #1f2937', padding: 12 }}>2023</td>
+                    <td style={{ border: '1px solid #1f2937', padding: 12 }}>-------</td>
+                    <td style={{ border: '1px solid #1f2937', padding: 12 }}>78.42%</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </section>
 
         

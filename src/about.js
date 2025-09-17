@@ -31,9 +31,118 @@ const About = () => (
           </ul>
         </div>
         <div style={{ textAlign: 'center' }}>
-          <img src={heroImg} alt="About visual" style={{ maxWidth: '100%', borderRadius: 16, opacity: 0.95 }} />
+          <img
+            src="/about-illustration.png"
+            alt="About illustration"
+            style={{ maxWidth: '100%', borderRadius: 16, opacity: 0.95 }}
+            onError={(e) => {
+              try { e.currentTarget.style.display = 'none'; } catch (_) {}
+            }}
+          />
         </div>
       </div>
+
+      {/* Educational Qualifications (MUI) */}
+      <Box sx={{ mt: 4 }}>
+        <Typography variant="h5" sx={{ fontWeight: 800, mb: 2 }}>
+          Educational Qualifications
+        </Typography>
+        <Box
+          sx={{
+            mt: 3,
+            border: 1,
+            borderColor: 'divider',
+            borderRadius: 2,
+            bgcolor: 'background.paper',
+            overflow: 'hidden',
+            '&:hover': { boxShadow: 2, transition: 'box-shadow 0.3s ease' }
+          }}
+        >
+          <Box
+            component="table"
+            sx={{
+              width: '100%',
+              borderCollapse: 'collapse',
+              '& th, & td': {
+                border: '1px solid',
+                borderColor: 'divider',
+                padding: 2,
+                textAlign: 'left',
+                verticalAlign: 'top'
+              },
+              '& th': {
+                bgcolor: 'primary.main',
+                color: 'white',
+                fontWeight: 700,
+                fontSize: '0.875rem'
+              },
+              '& tr:nth-of-type(even)': {
+                bgcolor: 'action.hover'
+              },
+              '& tr:hover': {
+                bgcolor: 'action.selected'
+              },
+              '& strong': {
+                color: 'primary.main',
+                fontWeight: 700
+              }
+            }}
+          >
+            <Box component="thead">
+              <Box component="tr">
+                <Box component="th" sx={{ width: '25%' }}>Qualification</Box>
+                <Box component="th" sx={{ width: '40%' }}>Institution Name</Box>
+                <Box component="th" sx={{ width: '15%' }}>Duration</Box>
+                <Box component="th" sx={{ width: '20%' }}>Percentage / CGPA</Box>
+              </Box>
+            </Box>
+            <Box component="tbody">
+              <Box component="tr">
+                <Box component="td">
+                  <strong>Diploma in Computer Science</strong>
+                </Box>
+                <Box component="td">
+                  Sri Dharmasthala Manjunatheshwara Polytechnic<br />
+                  <Typography variant="caption" color="text.secondary">
+                    SDM Institute of Technology (SDMIT), Ujire
+                  </Typography>
+                </Box>
+                <Box component="td">2023 – Present</Box>
+                <Box component="td">
+                  <Chip
+                    label="64.70 / 7.22"
+                    color="primary"
+                    variant="outlined"
+                    size="small"
+                    sx={{ fontWeight: 600 }}
+                  />
+                </Box>
+              </Box>
+              <Box component="tr">
+                <Box component="td">
+                  <strong>SSLC</strong>
+                </Box>
+                <Box component="td">
+                  s nijalingappa high school hosadurga<br />
+                  <Typography variant="caption" color="text.secondary">
+                    Kuvempu Nagara, Hosadurga, Chitradurga, Karnataka, with the Pincode 577527
+                  </Typography>
+                </Box>
+                <Box component="td">2023</Box>
+                <Box component="td">
+                  <Chip
+                    label="78.92%"
+                    color="primary"
+                    variant="outlined"
+                    size="small"
+                    sx={{ fontWeight: 600 }}
+                  />
+                </Box>
+              </Box>
+            </Box>
+          </Box>
+        </Box>
+      </Box>
     </div>
   </section>
 );

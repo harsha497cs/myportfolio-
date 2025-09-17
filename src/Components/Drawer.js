@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import avatarImg from './image1.jpg';
+// Removed avatar image per request
 
 const Icon = ({ name, size = 20, color = '#cbd5e1' }) => {
   const common = { width: size, height: size, fill: 'none', stroke: color, strokeWidth: 1.8, strokeLinecap: 'round', strokeLinejoin: 'round' };
@@ -153,7 +153,7 @@ const SocialButton = ({ icon, href, label }) => {
 const Drawer = ({
   name = 'harsha p',
   // Accept a string URL; fallback to local image
-  avatarUrl = avatarImg,
+  avatarUrl = '',
   active = 'portfolio',
   onNavigate,
   footerLink = '#'
