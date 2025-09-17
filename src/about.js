@@ -1,5 +1,6 @@
 import React from 'react';
-import heroImg from './Components/image1.jpg';
+import { Box, Typography, Chip } from '@mui/material';
+// Local hero image removed per request
 
 const About = () => (
   <section id="about" style={{ background: '#0b1220', color: '#e5e7eb', padding: '64px 24px' }}>
