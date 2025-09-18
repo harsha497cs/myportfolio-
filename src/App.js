@@ -184,7 +184,12 @@ function App() {
     const to = 'harsha497cs@gmail.com';
     const subject = encodeURIComponent(formValues.subject);
     const body = encodeURIComponent(`Name: ${formValues.name}\nEmail: ${formValues.email}\n\n${formValues.message}`);
-    window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+    const gmailUrl = `https://mail.google.com/mail/?view=cm&fs=1&to=${to}&su=${subject}&body=${body}`;
+    try {
+      window.open(gmailUrl, '_blank', 'noopener');
+    } catch (_) {
+      window.location.href = `mailto:${to}?subject=${subject}&body=${body}`;
+    }
   };
 
   return (
