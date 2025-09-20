@@ -13,7 +13,7 @@ function App() {
         const { default: Typed } = await import('typed.js');
         if (typedElRef.current) {
           typedInstance = new Typed(typedElRef.current, {
-            strings: ["Designer", "Developer", "Trainer"],
+            strings: ["Designer", "Developer"],
             typeSpeed: 100,
             backSpeed: 50,
             backDelay: 900,
