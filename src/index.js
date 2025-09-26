@@ -2,12 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import Phone from './phone';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+const isSmallScreen = typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(max-width: 520px)').matches;
+
 root.render(
   <React.StrictMode>
-    <App />
+    {isSmallScreen ? <Phone /> : <App />}
   </React.StrictMode>
 );
 
